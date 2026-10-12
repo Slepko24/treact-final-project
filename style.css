@@ -2,6 +2,7 @@
 
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: "Inter", system-ui;
   color: #243e63;
@@ -387,7 +388,7 @@ QUALITY WORK ↓
 
 /* 
 
-STEPS ↓
+STEPS 
 
 */
 
@@ -534,6 +535,7 @@ VALUES ↓
 
 .value {
   margin-right: 2rem;
+  margin-top: 35px;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -541,14 +543,14 @@ VALUES ↓
 
 .value__title {
   display: flex;
-  align-content: center;
+  align-items: center;
 }
 
 .value:nth-child(1) .value__img--wrapper {
      background-color: rgb(154, 230, 180);
 }
 
-.value__image-wrapper {
+.value__image--wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
