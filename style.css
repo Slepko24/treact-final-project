@@ -200,7 +200,7 @@ p {
 }
 
 .header__description {
-  width: 40%;
+  width:40;
 }
 
 .header__description--para {
@@ -1240,9 +1240,13 @@ MOBILE RESPONSIVENESS ↓
     display: block;
   }
 
-  .header .row {
+  header .row {
     flex-direction: column;
     align-items: center;
+  }
+
+  .nav__links {
+    display: none;
   }
 
   .container {
@@ -1365,6 +1369,10 @@ MOBILE RESPONSIVENESS ↓
 @media (max-width: 480px) {
   .container {
     padding: 64px 20px;
+  }
+
+  .header__description {
+    width: 100%;
   }
 
   .section__title {
