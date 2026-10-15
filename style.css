@@ -52,12 +52,13 @@ NAVBAR ↓
 
 */
 
-
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px, 0px 0px;
+  padding:
+    32px,
+    0px 0px;
 }
 
 .nav__row {
@@ -216,6 +217,7 @@ header .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 128px;
 }
 
 .header__description {
@@ -278,7 +280,7 @@ header .row {
   color: rgb(36, 62, 99);
   font-size: 16px;
   font-weight: 500;
-   transition: border-color 300ms;
+  transition: border-color 300ms;
 }
 
 .header__email--btn {
@@ -317,10 +319,12 @@ img {
 .header__img--wrapper {
   display: flex;
   justify-content: flex-end;
+  flex: 1;
+  min-width: 0;
 }
 
 .header__img {
-  width: 100%;
+  width: 60%;
 }
 
 /* 
@@ -333,6 +337,17 @@ FEATURES ↓
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#features .section__title,
+#features .section__para {
+  text-align: center;
+}
+
+#features .section__para {
+  max-width: 576px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .container {
@@ -359,7 +374,7 @@ FEATURES ↓
 
 .section__title {
   font-weight: 900;
-  line-height: 1.5;
+  line-height: 4.5;
   margin: 16px 0;
   letter-spacing: 0.025em;
 }
@@ -371,29 +386,38 @@ FEATURES ↓
 }
 
 .features {
-  max-width: 768px;
+  width: 100%;
+  max-width: 900px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 80px auto 0;
+  row-gap: 48px;
 }
 
 .feature {
   display: flex;
   width: calc(100% / 3);
-  padding: 24px;
+  gap: 16px;
+  padding: 24px 12px;
 }
 
 .feature__row {
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  width: 100%;
 }
 
 .feature__img--wrapper {
   display: flex;
-  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  padding: 0;
   border: 1px solid #e5e7eb;
-  border-radius: 500px;
+  border-radius: 50%;
 }
 
 .feature__img {
@@ -418,7 +442,6 @@ FEATURES ↓
   line-height: 2;
   font-weight: 500;
 }
-
 
 /* 
 
@@ -484,6 +507,8 @@ QUALITY WORK ↓
   right: 0px;
   bottom: 0px;
   fill: #6415ff;
+  --tw-text-opacity: 1;
+  color: rgba(100, 21, 255 var(--tw-text-opacity));
   z-index: 0;
   display: block;
 }
@@ -1337,9 +1362,9 @@ MOBILE RESPONSIVENESS ↓
 
 */
 
-ia (max-width: 768px) {
+@media (max-width: 768) {
   header .row {
-    align-item: flex-end;
+    align-items: flex-end;
     display: flex;
   }
 }
@@ -1349,11 +1374,11 @@ ia (max-width: 768px) {
     display: block;
   }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 80px 0;
+  @media (max-width: 768px) {
+    .container {
+      padding: 80px 0;
+    }
   }
-}
 
   header .row {
     flex-direction: column;
